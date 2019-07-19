@@ -2,11 +2,13 @@ import React from "react";
 import styled from 'styled-components';
 
 const Card = styled.div`
-display: flex;
-flex-direction: column;
 width: 400px;
+height: 300px;
 background-color: white;
 border-radius: 8px;
+opacity: 0.75;
+margin: 20px;
+padding; 100px;
 `
 const Name = styled.h2`
 font-size: 2rem;
@@ -14,9 +16,8 @@ font-size: 2rem;
 `
 const CharDescription = styled.p`
 font-size: 20px;
-padding: 2px;
+padding: 5px;
 margin: 5px;  
-
 `
 
 function CharacterCard({name, gender, height, eye_color, birth_year}) {

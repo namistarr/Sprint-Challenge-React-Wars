@@ -4,11 +4,10 @@ import CharacterCard from './CharacterCard';
 import styled from 'styled-components';
 
 const CharContainer = styled.div`
-font-family: 'sans-serif';
-//margin: 0 20px;
+font-family: 'arial';
 display: flex;
 flex-wrap: wrap;
-justify-content: space-around;
+justify-content: space-evenly;
 `
 
 function CharacterList() {
