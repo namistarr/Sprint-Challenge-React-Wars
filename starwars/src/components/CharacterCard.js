@@ -1,21 +1,33 @@
 import React from "react";
 import styled from 'styled-components';
 
+const Card = styled.div`
+display: flex;
+flex-direction: column;
+width: 400px;
+background-color: white;
+border-radius: 8px;
+`
+const Name = styled.h2`
+font-size: 2rem;
+
+`
+const CharDescription = styled.p`
+font-size: 20px;
+padding: 2px;
+margin: 5px;  
+
+`
 
 function CharacterCard({name, gender, height, eye_color, birth_year}) {
    return(
-   <div className='character-card'>
-   <img className='character-pic' />
-   <div className='character-description'>
-       <h2>Name: {name}</h2>
-       <p>Gender: {gender}</p>
-       <p>Height: {height}</p>
-       <p>Eye Color: {eye_color}</p>
-       <p>Birth Year: {birth_year}</p>
-
-
-    </div>
-  </div>
+   <Card>
+       <Name>Name: {name}</Name>
+       <CharDescription>👦👧 Gender: {gender}</CharDescription>
+       <CharDescription>📊 Height: {height}</CharDescription>
+       <CharDescription>👁️ Eye Color: {eye_color}</CharDescription>
+       <CharDescription>🎂 Birth Year: {birth_year}</CharDescription>
+  </Card>
 ) 
     
 }

@@ -1,6 +1,15 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import CharacterCard from './CharacterCard';
+import styled from 'styled-components';
+
+const CharContainer = styled.div`
+font-family: 'sans-serif';
+//margin: 0 20px;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+`
 
 function CharacterList() {
     const [characters, setCharacters] = useState([]);
@@ -19,12 +28,12 @@ function CharacterList() {
     },[]);
 
     return (
-        <div className='character-container'>            
+        <CharContainer>            
             {characters.map((character, index) => {
                 return <CharacterCard key={index} name={character.name} gender={character.gender} height={character.height} eye_color={character.eye_color} birth_year={character.birth_year} />;
                 })
             }
-        </div>
+        </CharContainer>
     )
 }
 export default CharacterList;
